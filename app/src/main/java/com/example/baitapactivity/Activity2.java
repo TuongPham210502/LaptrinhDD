@@ -19,12 +19,9 @@ public class Activity2 extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMainActivity();
+                finish();
             }
         });
     }
-    public void openMainActivity(){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
+
 }
