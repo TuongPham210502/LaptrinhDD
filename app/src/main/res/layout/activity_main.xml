@@ -78,14 +78,15 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="100"
-                    android:textColor="@color/black"
+                    android:textColor="#FA6420"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Friends" />
+                    android:text="Friends"
+                    android:textColor="#FA6420" />
             </LinearLayout>
 
             <LinearLayout
@@ -100,14 +101,15 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="100"
-                    android:textColor="@color/black"
+                    android:textColor="#27D521"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Followers" />
+                    android:text="Followers"
+                    android:textColor="#27D521" />
             </LinearLayout>
 
 
@@ -123,14 +125,15 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="100"
-                    android:textColor="@color/black"
+                    android:textColor="#7C14E3"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Followings" />
+                    android:text="Followings"
+                    android:textColor="#7C14E3" />
             </LinearLayout>
 
         </LinearLayout>
@@ -208,9 +211,9 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:padding="2dp"
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="10dp"
+                android:padding="2dp"
                 android:src="@drawable/email" />
 
             <View
