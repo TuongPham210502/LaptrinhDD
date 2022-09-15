@@ -19,7 +19,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class SignIn extends AppCompatActivity {
-    private Button bt;
+    private Button btSignIn,btSignUp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +29,8 @@ public class SignIn extends AppCompatActivity {
         EditText username= (EditText) findViewById(R.id.username);
         EditText password= (EditText) findViewById(R.id.password);
 
-
-        bt = (Button) findViewById(R.id.bt_signin);
-        bt.setOnClickListener(new View.OnClickListener() {
+        btSignIn = (Button) findViewById(R.id.bt_signin);
+        btSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (username.getText().toString().equals("tuong123")&&password.getText().toString().equals("12345")){
@@ -42,9 +42,21 @@ public class SignIn extends AppCompatActivity {
 
             }
         });
+
+        btSignUp = (Button) findViewById(R.id.bt_signup);
+        btSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSignUp();
+            }
+        });
     }
     public void openProfile(){
         Intent intent = new Intent(this, Profile.class);
+        startActivity(intent);
+    }
+    public void openSignUp(){
+        Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
     }
 }

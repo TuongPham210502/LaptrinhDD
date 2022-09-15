@@ -28,22 +28,14 @@
             android:background="#9E0A244A" />
 
         <Button
+            android:id="@+id/profileback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back"
             android:layout_marginLeft="5dp"
-            android:textAllCaps="false"
-            android:drawableLeft="@drawable/back"
             android:backgroundTint="#14000000"
-            />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:background="#6100C4FF"
-            app:srcCompat="@drawable/log_out" />
+            android:drawableLeft="@drawable/back"
+            android:text="Back"
+            android:textAllCaps="false" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/avtar"
