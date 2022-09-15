@@ -6,12 +6,14 @@
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:orientation="horizontal"
-    tools:context=".MainActivity">
+    tools:context=".Profile">
 
     <RelativeLayout
         android:id="@+id/wall"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="300dp"
+
+        >
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="match_parent"
@@ -24,6 +26,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#9E0A244A" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_marginLeft="5dp"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/back"
+            android:backgroundTint="#14000000"
+            />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="#6100C4FF"
+            app:srcCompat="@drawable/log_out" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/avtar"
