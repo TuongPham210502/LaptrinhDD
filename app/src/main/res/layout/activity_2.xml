@@ -38,5 +38,11 @@
             android:backgroundTint="#D3D3D3"
             android:text="Back to main activity"
             android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phạm Khắc Tưởng-2050531200328"
+            android:layout_gravity="center"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
