@@ -6,8 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/textTenphim"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tên phim"
+        />
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textTenphim"
+        android:id="@+id/textNam"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập năm sản xuất"
+        />
+    <Button
+        android:id="@+id/buttonThem"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textNam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thêm"/>
     <ListView
-        android:id="@+id/listviewFriend"
+        android:id="@+id/listviewPhim"
+        android:layout_marginTop="200dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="1dp"

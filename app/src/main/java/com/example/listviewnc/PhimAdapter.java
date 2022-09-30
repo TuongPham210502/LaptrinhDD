@@ -10,20 +10,20 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class BanbeAdapter extends BaseAdapter {
+public class PhimAdapter extends BaseAdapter {
     private Context context;
     private int layout;
-    private List<Banbe> banbeList;
+    private List<Phim> phimList;
 
-    public BanbeAdapter(Context context, int layout, List<Banbe> banbeList) {
+    public PhimAdapter(Context context, int layout, List<Phim> phimList) {
         this.context = context;
         this.layout = layout;
-        this.banbeList = banbeList;
+        this.phimList = phimList;
     }
 
     @Override
     public int getCount() {
-        return banbeList.size();
+        return phimList.size();
     }
 
     @Override
@@ -41,18 +41,15 @@ public class BanbeAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(layout,null);
 
-        //anh xa view
-        ImageView imgavt = (ImageView) view.findViewById(R.id.avatar);
-        TextView txtTen = (TextView) view.findViewById(R.id.tenbanbe);
-        TextView txtgtinh = (TextView) view.findViewById(R.id.gioitinh);
+        ImageView imgphim = (ImageView) view.findViewById(R.id.imagephim);
+        TextView txtTen = (TextView) view.findViewById(R.id.tenphim);
+        TextView txtnamsx = (TextView) view.findViewById(R.id.namsx);
 
-        //gan gia tri
-        Banbe banbe = banbeList.get(i);
+        Phim phim = phimList.get(i);
 
-        imgavt.setImageResource(banbe.getHinh());
-        txtTen.setText(banbe.getTen());
-        txtgtinh.setText(banbe.getGtinh());
-
+        imgphim.setImageResource(phim.getHinh());
+        txtTen.setText(phim.getTen());
+        txtnamsx.setText(phim.getNamsx());
         return view;
     }
 }
