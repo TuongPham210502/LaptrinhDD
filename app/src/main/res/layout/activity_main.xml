@@ -11,7 +11,8 @@
         android:id="@+id/layoutheader1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#FFFFFF">
+        android:background="#FFFFFF"
+        android:elevation="10dp">
 
         <ImageView
             android:id="@+id/imgavt1"
@@ -19,6 +20,8 @@
             android:layout_height="35dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
             android:src="@drawable/menu" />
 
 

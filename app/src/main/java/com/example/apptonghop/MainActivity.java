@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void open_profile(){
-        Intent intent = new Intent(this, ListPhim.class);
+        Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
     }
     public void open_listphim(){

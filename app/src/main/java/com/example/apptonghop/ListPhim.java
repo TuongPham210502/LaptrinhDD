@@ -23,7 +23,6 @@ public class ListPhim extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         ArrayList<DataPhim> arrPhim = new ArrayList<>();
-        arrPhim.add(new DataPhim(R.drawable.img_fall,"Fall","107 mins"));
         arrPhim.add(new DataPhim(R.drawable.img_jurassicworld,"Jurassic World Dominion","147 mins"));
         arrPhim.add(new DataPhim(R.drawable.img_topgun,"Top Gun:: Maverick","131 mins"));
         arrPhim.add(new DataPhim(R.drawable.img_doctorstrange,"Docter Strange in the Multiverse of Madness","126 mins"));
@@ -32,6 +31,7 @@ public class ListPhim extends AppCompatActivity {
         arrPhim.add(new DataPhim(R.drawable.img_uncharted,"Uncharted","116 mins"));
         arrPhim.add(new DataPhim(R.drawable.img_kingsman,"The King's Man","131 mins"));
         arrPhim.add(new DataPhim(R.drawable.img_terminator,"The Terminator","108 mins"));
+        arrPhim.add(new DataPhim(R.drawable.img_fall,"Fall","107 mins"));
         AdapterPhim adapterPhim = new AdapterPhim(arrPhim,getApplicationContext());
         recyclerView.setAdapter(adapterPhim);
     }

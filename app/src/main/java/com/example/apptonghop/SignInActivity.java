@@ -22,11 +22,11 @@ public class SignInActivity extends AppCompatActivity {
         btSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if (username.getText().toString().equals("tuong123")&&password.getText().toString().equals("12345")){
+                if (username.getText().toString().equals("tuong")&&password.getText().toString().equals("111")){
                     openProfile();
-//                }
-//                else{
-//                    Toast.makeText(SignInActivity.this,"Login failed",Toast.LENGTH_SHORT).show();}
+                }
+                else{
+                    Toast.makeText(SignInActivity.this,"Login failed",Toast.LENGTH_SHORT).show();}
             }
         });
 

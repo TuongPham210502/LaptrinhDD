@@ -27,14 +27,16 @@
             android:layout_height="match_parent"
             android:background="#9E0A244A" />
 
-        <Button
+        <ImageButton
             android:id="@+id/profileback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:backgroundTint="#14000000"
-            android:drawableLeft="@drawable/back"
-            android:text="Back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:longClickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="#FFFFFF"
+            android:background="@drawable/logout"
             android:textAllCaps="false" />
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -72,18 +74,20 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
                 android:orientation="vertical"
-                android:paddingHorizontal="20dp">
+                android:background="@drawable/rdd_frd"
+                android:elevation="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -97,16 +101,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="Friends"
                     android:textColor="#FA6420" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="vertical"
-                android:paddingHorizontal="20dp">
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/rdd_frd"
+                android:elevation="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -120,17 +127,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="Followers"
                     android:textColor="#27D521" />
             </LinearLayout>
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="vertical"
-                android:paddingHorizontal="20dp">
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/rdd_frd"
+                android:elevation="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -144,6 +154,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="Followings"
                     android:textColor="#7C14E3" />
             </LinearLayout>
