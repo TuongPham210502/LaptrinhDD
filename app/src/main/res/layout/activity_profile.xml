@@ -8,6 +8,18 @@
     android:orientation="horizontal"
     tools:context=".ProfileActivity">
 
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/bottom_nav"
+        app:itemBackground="@color/xanh"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu"
+        android:layout_alignParentBottom="true"
+        />
+
     <RelativeLayout
         android:id="@+id/wall"
         android:layout_width="match_parent"
@@ -25,7 +37,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#9E0A244A" />
+            android:background="#940A244A" />
 
         <ImageButton
             android:id="@+id/profileback"
@@ -70,12 +82,13 @@
         android:layout_height="match_parent"
         android:layout_below="@id/wall"
         android:layout_marginTop="-25dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/rdstop"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:orientation="horizontal">
@@ -85,9 +98,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="40dp"
-                android:orientation="vertical"
                 android:background="@drawable/rdd_frd"
-                android:elevation="10dp">
+                android:elevation="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -110,10 +123,10 @@
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="vertical"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/rdd_frd"
-                android:elevation="10dp">
+                android:elevation="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -137,10 +150,10 @@
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="vertical"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/rdd_frd"
-                android:elevation="10dp">
+                android:elevation="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -161,99 +174,121 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/roundbdr"
-            android:elevation="10dp">
+        <View
+            android:layout_width="380dp"
+            android:layout_height="1dp"
+            android:background="#C3BFBF"
+            android:layout_gravity="center_horizontal"/>
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="10dp"
-                android:src="@drawable/academy" />
+        <ScrollView
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_gravity="center_horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="#FFFFFF" />
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/roundbdr"
+                    android:elevation="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingHorizontal="10dp"
-                android:text="University of Technology and Education"
-                android:textColor="@color/white"
-                android:textSize="15dp" />
-        </LinearLayout>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10dp"
+                        android:src="@drawable/academy" />
 
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/roundbdr"
-            android:elevation="10dp">
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="#FFFFFF" />
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="10dp"
-                android:src="@drawable/location" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="University of Technology and Education"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+                </LinearLayout>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="#FFFFFF" />
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/roundbdr"
+                    android:elevation="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:padding="10dp"
-                android:text="Điện Hồng, Điện Bàn, Quảng Nam"
-                android:textColor="@color/white"
-                android:textSize="15dp" />
-        </LinearLayout>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10dp"
+                        android:src="@drawable/location" />
 
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/roundbdr"
-            android:elevation="10dp">
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="#FFFFFF" />
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="10dp"
-                android:padding="2dp"
-                android:src="@drawable/email" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:text="Điện Hồng, Điện Bàn, Quảng Nam"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+                </LinearLayout>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:background="#FFFFFF" />
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="20dp"
+                    android:background="@drawable/roundbdr"
+                    android:elevation="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingHorizontal="10dp"
-                android:text="2050531200328@sv.ute.udn.vn"
-                android:textColor="@color/white"
-                android:textSize="15dp" />
-        </LinearLayout>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="10dp"
+                        android:padding="2dp"
+                        android:src="@drawable/email" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="#FFFFFF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="2050531200328@sv.ute.udn.vn"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+
 
     </LinearLayout>
 

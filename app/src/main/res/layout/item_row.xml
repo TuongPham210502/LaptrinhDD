@@ -1,68 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
-    android:background="#FFFFFF"
-    android:padding="10dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutPhim"
+    android:background="@color/white"
     android:elevation="5dp"
-    android:layout_marginBottom="10dp"
+    android:layout_margin="6dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
     >
 
-    <ImageView
-        android:id="@+id/imgphim"
-        android:layout_width="100dp"
-        android:layout_height="130dp"
-        />
-    <TextView
-        android:id="@+id/txttenphim"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/imgphim"
-        android:text="text"
-        android:textColor="#0E2C57"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        android:layout_marginLeft="15dp"
-        />
+        android:orientation="vertical"
+        android:padding="5dp">
 
-    <TextView
-        android:id="@+id/txtthgian"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txttenphim"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/imgphim"
-        android:drawableLeft="@drawable/time"
-        android:drawablePadding="10dp"
-        android:text="180p"
-        android:textColor="#878787"
-        android:textSize="18dp" />
+        <ImageView
+            android:id="@+id/imgphim"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@color/black" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/txtrate"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/txtthgian"-->
-<!--        android:layout_marginLeft="15dp"-->
-<!--        android:layout_marginTop="5dp"-->
-<!--        android:layout_toRightOf="@+id/imgphim"-->
-<!--        android:drawableLeft="@drawable/star"-->
-<!--        android:drawablePadding="10dp"-->
-<!--        android:text="7,8"-->
-<!--        android:textColor="#878787"-->
-<!--        android:textSize="18dp" />-->
+        <TextView
+            android:id="@+id/txttenphim"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="text"
+            android:textColor="#0E2C57"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btdownload"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="1dp"
-        android:backgroundTint="#5EA812"
-        android:text="Xem" />
-
-
+        <TextView
+            android:id="@+id/txtthgian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/time"
+            android:drawablePadding="3dp"
+            android:text="180p"
+            android:textColor="#878787"
+            android:textSize="12dp" />
+    </LinearLayout>
 
 </RelativeLayout>

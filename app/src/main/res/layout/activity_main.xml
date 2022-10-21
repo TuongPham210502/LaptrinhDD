@@ -4,8 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#96CDF1"
+    android:background="#C0E4DF"
     tools:context=".MainActivity">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/xanh"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        android:elevation="10dp"
+        app:menu="@menu/menu" />
 
     <RelativeLayout
         android:id="@+id/layoutheader1"
@@ -26,7 +38,7 @@
 
 
         <EditText
-            android:layout_width="230dp"
+            android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="25dp"
@@ -77,16 +89,16 @@
         app:rowCount="1">
 
         <LinearLayout
-            android:layout_width="wrap_content"
             android:id="@+id/profile"
-            android:foreground="?attr/selectableItemBackground"
-            android:clickable="true"
+            android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="15sp"
             android:background="@color/white"
+            android:clickable="true"
             android:elevation="10dp"
+            android:foreground="?attr/selectableItemBackground"
             android:orientation="vertical">
 
             <ImageView
@@ -100,22 +112,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="16dp"
+                android:text="Tưởng Phạm"
                 android:textColor="#224E98"
-                android:text="Tưởng Phạm" />
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/phim"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
-            android:id="@+id/phim"
-            android:foreground="?attr/selectableItemBackground"
-            android:clickable="true"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="15sp"
             android:background="@color/white"
+            android:clickable="true"
             android:elevation="10dp"
+            android:foreground="?attr/selectableItemBackground"
             android:orientation="vertical">
 
             <ImageView
@@ -128,11 +140,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:textColor="#224E98"
                 android:layout_gravity="center"
-                android:text="Phim hay" />
+                android:text="Phim hay"
+                android:textColor="#224E98"
+                android:textSize="16dp" />
         </LinearLayout>
     </GridLayout>
+
 
 </RelativeLayout>

@@ -4,17 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3E3E3"
+    android:background="@color/white"
     tools:context=".ListPhim">
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listphim"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp" />
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/bottom_nav"
+            app:itemBackground="@color/xanh"
+            app:itemTextColor="@drawable/selector"
+            app:itemIconTint="@drawable/selector"
+            app:menu="@menu/menu"
+            android:layout_alignParentBottom="true"
+            />
 
 </RelativeLayout>
