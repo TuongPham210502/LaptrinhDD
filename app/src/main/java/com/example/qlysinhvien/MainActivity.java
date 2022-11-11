@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.qlysinhvien.adapter.SinhVienAdapter;
 import com.example.qlysinhvien.dao.SinhVienDao;
+import com.example.qlysinhvien.model.Lop;
 import com.example.qlysinhvien.model.SinhVien;
 
 import org.xml.sax.Parser;
@@ -28,17 +29,24 @@ public class MainActivity extends AppCompatActivity {
     private List<SinhVien> sinhVienList328;
     private SinhVienAdapter sinhVienAdapter328;
     private SinhVienDao sinhVienDao328;
+    private Lop lop;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle==null){
+            return;
+        }
+        lop = (Lop) bundle.get("objLop");
 
         lvSinhvien328 = findViewById(R.id.lv_sinhvien);
 
         sinhVienList328 = new ArrayList<SinhVien>();
 
         sinhVienDao328 = new SinhVienDao(MainActivity.this);
-        sinhVienList328 = sinhVienDao328.LoadAllSV();
+        sinhVienList328 = sinhVienDao328.LoadAllSV(String.valueOf(lop.getLop()));
 
 //        sinhVienList.add(new SinhVien(132,"Nguyen Nam",1,"0905213422","ngnam@email.com"));
 //        sinhVienList.add(new SinhVien(123,"Nguyen Van Binh",1,"0905213422","ngbinh@email.com"));
@@ -57,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        SuKienClickItemList();
-        SuKienLongClickList();
+//        SuKienClickItemList();
+//        SuKienLongClickList();
     }
 
     private void SuKienClickItemList(){
@@ -101,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         sinhVienList328.clear();
-        sinhVienList328.addAll(sinhVienDao328.LoadAllSV());
+        sinhVienList328.addAll(sinhVienDao328.LoadAllSV(String.valueOf(lop.getLop())));
         sinhVienAdapter328.notifyDataSetChanged();
     }
 }

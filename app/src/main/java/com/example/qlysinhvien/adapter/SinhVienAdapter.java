@@ -49,8 +49,7 @@ public class SinhVienAdapter extends BaseAdapter {
 
             viewHolder.txtMaSV328 = view.findViewById(R.id.txtMaSV);
             viewHolder.txtHoten328 = view.findViewById(R.id.txtTenSV);
-            viewHolder.txtEmail328 = view.findViewById(R.id.txtEmail);
-            viewHolder.txtSoDT328 = view.findViewById(R.id.txtSoDt);
+            viewHolder.txtNamSinh328 = view.findViewById(R.id.txtNamSinh);
             viewHolder.imgGioitinh328 = view.findViewById(R.id.imgGioitinh);
             view.setTag(viewHolder);
         }
@@ -60,8 +59,7 @@ public class SinhVienAdapter extends BaseAdapter {
         SinhVien sinhVien = sinhVienList328.get(i);
         viewHolder.txtMaSV328.setText("Mã SV: "+sinhVien.getMaSV());
         viewHolder.txtHoten328.setText(sinhVien.getHoten());
-        viewHolder.txtEmail328.setText("Email: "+sinhVien.getEmail());
-        viewHolder.txtSoDT328.setText("Số điện thoại: "+sinhVien.getSoDT());
+        viewHolder.txtNamSinh328.setText("Năm sinh: "+sinhVien.getNamSinh());
 
         if(sinhVien.getGioitinh()==0){
             viewHolder.imgGioitinh328.setImageResource(R.drawable.woman);
@@ -74,7 +72,7 @@ public class SinhVienAdapter extends BaseAdapter {
     }
 
     class ViewHolder{
-        TextView txtHoten328,txtMaSV328,txtEmail328,txtSoDT328;
+        TextView txtHoten328,txtMaSV328,txtNamSinh328;
         ImageView imgGioitinh328;
     }
 }

@@ -6,73 +6,168 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Them">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2050531200328-Phạm Khắc Tưởng"
         android:textColor="@color/black"
         android:layout_gravity="center"/>
-    <EditText
-        android:id="@+id/edtHoten"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông tin sinh viên"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_gravity="center"/>
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nhập họ tên"
-        android:padding="10dp"
-        android:layout_margin="20dp"/>
-
-    <RadioGroup
-        android:id="@+id/rdgGioitinh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginHorizontal="10dp"
         >
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Họ tên:"
+        android:layout_column="0"
+        android:layout_row="0"
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
+        <EditText
+            android:id="@+id/edtHoten"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="Nhập họ tên"
+            android:layout_column="1"
+            android:layout_row="0"/>
+        <RadioGroup
+            android:id="@+id/rdgGioitinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giới tính: "
+                android:textColor="@color/black"
+                android:textSize="18dp"/>
+
+            <RadioButton
+                android:id="@+id/radioNam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Nam"/>
+            <RadioButton
+                android:id="@+id/radioNu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Nữ"/>
+        </RadioGroup>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Giới tính: "
+            android:text="Năm sinh:"
+            android:layout_column="0"
+            android:layout_row="2"
             android:textColor="@color/black"
-            android:layout_marginLeft="30dp"
-            android:layout_gravity="center"
             android:textSize="18dp"/>
+        <EditText
+            android:id="@+id/edtNamsinh"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:inputType="number"
+            android:hint="Nhập năm sinh"
+            android:layout_column="1"
+            android:layout_row="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lớp:"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+        <Spinner
+            android:id="@+id/spnLop"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_marginLeft="10dp"
 
-        <RadioButton
-            android:id="@+id/radioNam"
+            />
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:text="Nam"/>
-        <RadioButton
-            android:id="@+id/radioNu"
-            android:layout_width="wrap_content"
+            android:text="Điểm toán:"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+        <EditText
+            android:id="@+id/edtToan"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Nữ"/>
-    </RadioGroup>
-    <EditText
-        android:id="@+id/edtSDT"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nhập số điện thoại"
-        android:padding="10dp"
-        android:inputType="number"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="20dp"/>
-    <EditText
-        android:id="@+id/edtEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nhập email"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="20dp"/>
+            android:inputType="numberDecimal"
+            android:hint=""
+            android:layout_row="4"
+            android:layout_column="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Điểm Tin:"
+            android:layout_row="5"
+            android:inputType="numberDecimal"
+            android:layout_column="0"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+        <EditText
+            android:id="@+id/edtTin"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_marginLeft="10dp"
+            android:hint=""
+            android:layout_row="5"
+            android:layout_column="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Điểm Anh:"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+        <EditText
+            android:id="@+id/edtAnh"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:inputType="numberDecimal"
+            android:hint=""
+            android:layout_row="6"
+            android:layout_column="1"/>
+    </GridLayout>
+
     <Button
         android:id="@+id/btnLuu"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#2FCD13"
         android:text="Lưu"/>
     <Button
@@ -80,7 +175,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnThoat"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="#CF2121"
         android:text="Thoát"/>
 

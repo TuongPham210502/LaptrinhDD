@@ -18,20 +18,25 @@ public class SinhVienDao {
         csdl328 = new DBHelper(context);
     }
 
-    public List<SinhVien> LoadAllSV(){
-        String sqlSelectSV328 = "SELECT * FROM SinhVien";
+    public List<SinhVien> LoadAllSV(String maLop){
+        String sqlSelectSV328 = "SELECT * FROM SinhVien where LopSV = '"+maLop+ "'";
 
         List<SinhVien> sinhVienList328 = new ArrayList<SinhVien>();
         SQLiteDatabase database328 = csdl328.getReadableDatabase();
         Cursor cursor328 = database328.rawQuery(sqlSelectSV328,null);
         cursor328.moveToFirst();
         while (!cursor328.isAfterLast()){
+
             int masv328 = cursor328.getInt(0);
             String hoten328 = cursor328.getString(1);
             int gioitinh328 = cursor328.getInt(2);
-            String sdt328 = cursor328.getString(3);
-            String email328 = cursor328.getString(4);
-            SinhVien sinhVien328 = new SinhVien(masv328,hoten328,gioitinh328,sdt328,email328);
+            String namsinh328 = cursor328.getString(3);
+            Float diemtoan = cursor328.getFloat(4);
+            Float diemtin = cursor328.getFloat(5);
+            Float diemanh = cursor328.getFloat(6);
+            String lopsv = cursor328.getString(7);
+            SinhVien sinhVien328 = new SinhVien(masv328,hoten328,gioitinh328,namsinh328,diemtoan,diemtin,diemanh,lopsv);
+
             sinhVienList328.add(sinhVien328);
             cursor328.moveToNext();
         }
@@ -41,11 +46,15 @@ public class SinhVienDao {
     public void ThemSinhVien(SinhVien sv328){
         SQLiteDatabase database328 = csdl328.getWritableDatabase();
         ContentValues values328 = new ContentValues();
-        //"INSERT INTO SinhVien(HoTen,GioiTinh,SoDT,Email) VALUES('Nguyen Van Nam',1,'0905123456','mail@mail.com')"
+//SinhVien: MaSV, HoTen, GioiTinh, NamSinh,Toan,Tin,Anh,LopSV
+        //INSERT INTO SinhVien(HoTen,GioiTinh,NamSinh,Toan,Tin,Anh,LopSV)
         values328.put("HoTen",sv328.getHoten());
         values328.put("GioiTinh",sv328.getGioitinh());
-        values328.put("SoDT",sv328.getSoDT());
-        values328.put("Email",sv328.getEmail());
+        values328.put("NamSinh",sv328.getNamSinh());
+        values328.put("Toan",sv328.getDiemToan());
+        values328.put("Tin",sv328.getDiemTin());
+        values328.put("Anh",sv328.getDiemAnh());
+        values328.put("LopSV",sv328.getLop());
 
         database328.insert("SinhVien","", values328);
     }
@@ -56,8 +65,12 @@ public class SinhVienDao {
         //"INSERT INTO SinhVien(HoTen,GioiTinh,SoDT,Email) VALUES('Nguyen Van Nam',1,'0905123456','mail@mail.com')"
         values328.put("HoTen",sv328.getHoten());
         values328.put("GioiTinh",sv328.getGioitinh());
-        values328.put("SoDT",sv328.getSoDT());
-        values328.put("Email",sv328.getEmail());
+        values328.put("NamSinh",sv328.getNamSinh());
+        values328.put("Toan",sv328.getDiemToan());
+        values328.put("Tin",sv328.getDiemTin());
+        values328.put("Anh",sv328.getDiemAnh());
+        values328.put("LopSV",sv328.getLop());
+
         String masv328 = String.valueOf(sv328.getMaSV());
         database328.update("SinhVien",values328, "MaSV = ?",new String[]{masv328});
     }

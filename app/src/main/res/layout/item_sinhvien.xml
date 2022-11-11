@@ -32,24 +32,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Mã SV"/>
-<!--        <TextView-->
-<!--            android:id="@+id/txtGioitinh"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="10dp"-->
-<!--            android:text="Giới tính"/>-->
+
         <TextView
-            android:id="@+id/txtEmail"
+            android:id="@+id/txtNamSinh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Email"/>
-        <TextView
-            android:id="@+id/txtSoDt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Số ĐT"/>
+            android:text="Năm sinh"/>
     </LinearLayout>
 
 

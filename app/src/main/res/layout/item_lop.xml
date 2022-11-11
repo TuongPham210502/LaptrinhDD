@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#DA6C32"
+    android:padding="10dp"
+    android:layout_marginHorizontal="10dp"
+    android:elevation="10dp"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_marginVertical="10dp">
+    <TextView
+        android:id="@+id/txtLop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lớp: 20T1"
+        android:paddingVertical="20dp"
+        android:textSize="20dp"
+        android:textColor="#FAFAFA"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+</LinearLayout>
