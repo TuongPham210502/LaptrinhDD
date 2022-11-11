@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        SuKienClickItemList();
-//        SuKienLongClickList();
+        SuKienClickItemList();
+        SuKienLongClickList();
     }
 
     private void SuKienClickItemList(){
@@ -74,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 SinhVien sinhVien = sinhVienList328.get(i);
-                Them.capnhat328 = true;
-                Intent intent = new Intent(MainActivity.this,Them.class);
+                Intent intent = new Intent(MainActivity.this,ChiTietSinhVien.class);
                 intent.putExtra("Sinhvien",sinhVien);
                 startActivity(intent);
             }
         });
     }
+
 
     private void SuKienLongClickList()
     {

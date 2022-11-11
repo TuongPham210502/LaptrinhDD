@@ -42,7 +42,26 @@ public class SinhVienDao {
         }
         return sinhVienList328;
     }
+    public SinhVien LoadOneSV(String maSV){
+        SinhVien sinhVien;
+        String sql = "SELECT * FROM SinhVien where MaSV = '"+ maSV +"'";
+        SQLiteDatabase database = csdl328.getReadableDatabase();
+        Cursor cursor328 = database.rawQuery(sql,null);
+        cursor328.moveToFirst();
 
+            int masv328 = cursor328.getInt(0);
+            String hoten328 = cursor328.getString(1);
+            int gioitinh328 = cursor328.getInt(2);
+            String namsinh328 = cursor328.getString(3);
+            Float diemtoan = cursor328.getFloat(4);
+            Float diemtin = cursor328.getFloat(5);
+            Float diemanh = cursor328.getFloat(6);
+            String lopsv = cursor328.getString(7);
+            sinhVien = new SinhVien(masv328,hoten328,gioitinh328,namsinh328,diemtoan,diemtin,diemanh,lopsv);
+
+            cursor328.moveToNext();
+        return sinhVien;
+    }
     public void ThemSinhVien(SinhVien sv328){
         SQLiteDatabase database328 = csdl328.getWritableDatabase();
         ContentValues values328 = new ContentValues();

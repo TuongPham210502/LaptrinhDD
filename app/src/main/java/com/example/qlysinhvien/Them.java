@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -13,7 +14,9 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.qlysinhvien.dao.LopDao;
 import com.example.qlysinhvien.dao.SinhVienDao;
+import com.example.qlysinhvien.model.Lop;
 import com.example.qlysinhvien.model.SinhVien;
 
 import java.util.ArrayList;
@@ -30,14 +33,34 @@ public class Them extends AppCompatActivity {
     private SinhVien sinhVien328;
     private Spinner spnLop;
     private String tenLop;
+    private Lop lop328;
+    private LopDao lopDao328;
+    private ArrayList<Lop> lopList328;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_them);
+        AnhXa();
+
         final ArrayList<String> arrTenLop = new ArrayList<String>();
+//        arrTenLop.add("20T1");
+//        arrTenLop.add("20T2");
+//        arrTenLop.add("20T3");
+
+        lopList328 = new ArrayList<Lop>();
+
+        lopDao328 = new LopDao(Them.this);
+        lopList328 = lopDao328.LoadLop();
+        for (int i = 0; i < lopList328.size(); i++) {
+            arrTenLop.add(lopList328.get(i).getLop());
+        }
+
+        ArrayAdapter adapterLop = new ArrayAdapter(this, android.R.layout.simple_spinner_item,arrTenLop);
+        adapterLop.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnLop.setAdapter(adapterLop);
 
         svDao328 = new SinhVienDao(Them.this);
-        AnhXa();
         spnLop.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -54,11 +77,19 @@ public class Them extends AppCompatActivity {
             Intent intent = getIntent();
             sinhVien328 = (SinhVien) intent.getSerializableExtra("Sinhvien");
 
+            for(int i= 0; i < spnLop.getAdapter().getCount(); i++)
+            {
+                if(spnLop.getAdapter().getItem(i).toString().equals(sinhVien328.getLop())==true)
+                {
+                    spnLop.setSelection(i);
+                }
+            }
+
             edtHoten328.setText(sinhVien328.getHoten());
             edtNamsinh328.setText(sinhVien328.getNamSinh());
-            edtToan.setText((int) sinhVien328.getDiemToan());
-            edtTin.setText((int) sinhVien328.getDiemTin());
-            edtAnh.setText((int) sinhVien328.getDiemAnh());
+            edtToan.setText(String.valueOf(sinhVien328.getDiemToan()));
+            edtTin.setText(String.valueOf(sinhVien328.getDiemTin()));
+            edtAnh.setText(String.valueOf(sinhVien328.getDiemAnh()));
             gioitinh328 = sinhVien328.getGioitinh();
             if(gioitinh328==1){
                 radioNam328.setChecked(true);
@@ -98,6 +129,7 @@ public class Them extends AppCompatActivity {
                         sinhVien328.setDiemToan(Float.valueOf(edtToan.getText().toString()));
                         sinhVien328.setDiemTin(Float.valueOf(edtTin.getText().toString()));
                         sinhVien328.setDiemAnh(Float.valueOf(edtAnh.getText().toString()));
+                        sinhVien328.setLop(String.valueOf(spnLop.getSelectedItem()));
                         svDao328.CapNhatSinhVien(sinhVien328);
                         Toast.makeText(getApplicationContext(),"Đã cập nhật",Toast.LENGTH_LONG).show();
                     }

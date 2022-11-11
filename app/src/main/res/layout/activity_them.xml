@@ -164,19 +164,19 @@
 
     <Button
         android:id="@+id/btnLuu"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:backgroundTint="#2FCD13"
         android:text="Lưu"/>
     <Button
-        android:layout_width="200dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/btnThoat"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:backgroundTint="#CF2121"
-        android:text="Thoát"/>
+        android:text="Xong"/>
 
 </LinearLayout>
