@@ -10,12 +10,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.qlysinhvien.adapter.SinhVienAdapter;
 import com.example.qlysinhvien.dao.SinhVienDao;
 import com.example.qlysinhvien.model.Lop;
 import com.example.qlysinhvien.model.SinhVien;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.xml.sax.Parser;
 
@@ -23,8 +25,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private Button btnThem328;
-
+    private FloatingActionButton btnThem328;
+    private TextView txtTitle;
     private ListView lvSinhvien328;
     private List<SinhVien> sinhVienList328;
     private SinhVienAdapter sinhVienAdapter328;
@@ -42,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
         lop = (Lop) bundle.get("objLop");
 
         lvSinhvien328 = findViewById(R.id.lv_sinhvien);
-
+        txtTitle = findViewById(R.id.title);
+        txtTitle.setText("DANH SÁCH SINH VIÊN LỚP "+ lop.getLop());
         sinhVienList328 = new ArrayList<SinhVien>();
 
         sinhVienDao328 = new SinhVienDao(MainActivity.this);

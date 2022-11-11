@@ -65,7 +65,7 @@ public class ChiTietSinhVien extends AppCompatActivity {
         txtTin.setText(String.valueOf(sinhVien.getDiemTin()));
         txtAnh.setText(String.valueOf(sinhVien.getDiemAnh()));
         Float dtb = (Float) (sinhVien.getDiemToan()+sinhVien.getDiemTin()+sinhVien.getDiemAnh())/3;
-        txtDiemTB.setText("Trung bình: "+ String.format("%.2f", dtb));
+        txtDiemTB.setText(String.format("%.2f", dtb));
     }
     @Override
     protected void onResume() {
