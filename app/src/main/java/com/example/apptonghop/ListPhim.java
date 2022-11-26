@@ -2,7 +2,6 @@ package com.example.apptonghop;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.gridlayout.widget.GridLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,8 +21,9 @@ public class ListPhim extends AppCompatActivity implements InterfaceClickItem{
     private RecyclerView rcvListPhim;
 
 
-    ArrayList<Phim> arrPhim;
-    PhimAdapter phimAdapter;
+    private ArrayList<Phim> arrPhim;
+    private PhimAdapter phimAdapter;
+    private String test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
